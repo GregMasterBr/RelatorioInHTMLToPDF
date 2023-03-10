@@ -1,0 +1,199 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="Author" content="Gregorio, GregMaster, CEDEPS, FACENS" />
+	<title>Report Progeral </title>
+	<style>
+		*{
+			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+		}
+		.tables table{
+			border-spacing: 6px;
+		}		
+      .tables th,
+      .tables td {
+        padding: 10px;
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+	  .Approved, .Pass{
+	  	font-weight:bold;
+		color:green;
+	  }
+	  .Reproved, .Fail{
+		font-weight:bold;
+		color:red;
+	  }
+    </style>
+</head>
+<body style="border: 0px solid #000; margin:0;padding:0;">
+	<div class="container " style="border: 0px solid #1C6EA4;padding: 20px; ">
+		<header>
+			<table border="0" style="width:100%">
+				<thead>
+				  <tr>
+					<th colspan="2"> 
+						|!@[LOGO]@!|
+					</th>
+					<th><h1>Report - TEST - |!@[TYPER_TEST]@!|</h1></th>
+					<th><span>|!@[DATE]@!|</span></th>
+				  </tr>
+				</thead>
+			</table>			
+		</header>
+		
+		<main class="tables">
+			<h2>Information</h2>	
+			<table border="0" style="width:100%">
+				<tbody>
+				  <tr>
+					<td><b>Tracebility Number</b></td>
+					<td>|!@[TRACEBILITY_NUMBER]@!|</td>
+					<td><b>Status</b></td>
+					<td class="|!@[STATUS]@!|">|!@[STATUS]@!|</td>						
+				  </tr>
+				  <tr>
+					<td><b>Sample</b></td>
+					<td>|!@[QTT_SAMPLE]@!|</td>
+					<td><b>Total Quantity</b></td>
+					<td>|!@[QTT_TOTAL]@!|</td>
+				  </tr>
+				  <tr>
+					<td><b>Lot material</b></td>
+					<td>|!@[LOT_MATERIAL]@!|</td>
+					<td><b>Standard</b></td>
+					<td>|!@[STANDARD_TEST]@!|</td>
+				  </tr>
+				  <tr>
+					<td><b>Material Code</b></td>
+					<td>|!@[MATERIAL_CODE]@!|</td>
+					<td><b>Product</b></td>
+					<td>|!@[PRODUCT]@!|</td>
+				  </tr>
+				  <tr>
+					<td><b>Operator</b></td>
+					<td>|!@[OPERATOR]@!|</td>
+					<td><b>Date</b></td>
+					<td>|!@[DATE_TEST]@!|</td>
+				  </tr>
+				  <tr>
+					<td><b>Inspection Type</b></td>
+					<td>|!@[INSPECTION_TYPE]@!|</td>
+					<td><b>Turn</b></td>
+					<td>|!@[TURN]@!|</td>
+				  </tr>
+				</tbody>
+			</table>	
+			<h5 style="color:red">|!@[ERROR_GENERAL]@!|</h5>
+		</main>
+		<div class="tables">
+			<section style="clear:both">
+				<h2>Standard</h2>		
+				<table border="0" style="width:100%">
+					<tbody>
+					  <tr>
+						<td>Name</td>
+						<td>|!@[STANDARD_TEST_2]@!|</td>
+						<td>Standard</td>
+						<td>|!@[STANDARD_TEST]@!|</td>					
+					  </tr>
+					  <tr>
+						<td>Bar (Max)</td>
+						<td>|!@[BAR_MAX]@!|</td>
+						<td><b>Fall Bar</b></td>
+						<td>|!@[FALL_BAR]@!|</td>						
+					  </tr>
+					  <tr>
+						<td><b>Bar increment</b></td>
+						<td>|!@[BAR_ADD]@!|</td>
+						<td><b>Bar increment per sec</b></td>
+						<td>|!@[BAR_SEC]@!|</td>							
+					  </tr>   					  
+					</tbody>
+				</table>	
+			
+			</section>
+
+			<section style="clear:both">
+				<h2 class="|!@[RNC]@!|">RNC Information</h2>		
+				<table border="0" style="width:100%">
+					<tbody>
+					<tr>
+						<td>Responsible</td>
+						<td>|!@[RESPONSIBLE_RNC]@!|</td>
+						<td>Compreenhise RNC next inspection</td>
+						<td>|!@[COMPREEHISE_RNC]@!|</td>
+					  </tr>
+					  <tr>
+						<td>Code Product</td>
+						<td>|!@[CODE_PRODUCT_RNC]@!|</td>
+						<td>Product's Name</td>
+						<td>|!@[PRODUCT_NAME_RNC]@!|</td>
+					  </tr>
+					  <tr>
+						<td>Operation</td>
+						<td>|!@[OPERATION_RNC]@!|</td>
+						<td>Annotations</td>
+						<td>|!@[ANNOTATIONS_RNC]@!|</td>
+					  </tr>
+					  <tr>
+						<td>Quantanty of the box</td>
+						<td>|!@[QTT_BOX_RNC]@!|</td>
+						<td>Alert</td>
+						<td>|!@[ALERT_RNC]@!|</td>
+					  </tr>	
+					  <tr>
+						<td>Critical Quality Analysis</td>
+						<td colspan="3">|!@[CRITICAL_ANALYSIS_RNC]@!|</td>
+					  </tr>				  
+					  
+					</tbody>				  
+				</table>
+				<h3>Details Elements of the RNC</h3>		
+				<table border="0" style="width:100%">
+					<thead>
+					<tr>
+						<th>#</th>
+						<th>Non Conformity Code</th>
+						<th>Quantity</th>
+						<th>Disposition</th>
+						<th>Description</th>
+						<th>Observation</th>					
+					  </tr>
+					</thead>
+					<tbody>
+						|!@[ITENS_RNC]@!|
+					</tbody>				  
+				</table>				
+			</section>
+				
+			<section style="clear:both">
+				<h2 id="|!@[ID_TEST]@!|">Consolidated Test Elements Results</h2>		
+				<h3>Executed |!@[QTT_REALIZED]@!|/|!@[QTT_SAMPLE]@!|</h3>								
+				<table border="0" style="width:100%">
+					<thead>
+					<tr>
+						<th>#</th>
+						<th>Id Item</th>						
+						<th>Status</th>
+						<th>Obs</th>
+						<th>Min</th>
+						<th>Max</th>						
+						<th>Change in leak test</th>
+						<th>Date</th>
+					  </tr>
+					</thead>
+					<tbody>
+						|!@[ITENS]@!|
+					</tbody>				  
+				</table>			
+			</section>
+		</div>
+		<footer style="margin-top: 20px; text-align:center;">
+			<small style="text-align:center; display:block;"> @Copyright Progeral Clamp Developers - |!@[YEAR]@!| </small>
+		</footer>
+	</div>
+</body>
+</html>

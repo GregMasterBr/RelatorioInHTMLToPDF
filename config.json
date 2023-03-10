@@ -1,0 +1,12 @@
+{
+	"MainColor": "#0b4596",
+	"Manufacturer": "Cedeps\\Facens",
+	"PathBaseReport": "C:\\reports\\",
+	"PathTemplateReport": "C:\\reports\\template-report.html",
+	"PathTemplateReportRNC": "C:\\reports\\template-report-rnc.html",
+	"PathAndNameLogoReport": "C:\\reports\\progeral-thumbnail.png",
+	"PathLocalToSaveReport": "C:\\reports\\",
+	"PathProgramView": "c:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
+	"TitleProgram": "Progeral - Pressure Limit Test for Clamps",
+	"TitleLogin": "Login"
+}

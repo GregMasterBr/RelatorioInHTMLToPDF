@@ -33,9 +33,20 @@ namespace RelatorioInHTMLToPDF
             Random rInt = new Random();
 
             StructTest tTest = new StructTest();
-            tTest.type = "TESTE";
-            tTest.realized_at = DateTime.Now;
             tTest.idTest = rInt.Next(0, 1000000);
+            tTest.type_test = "Professional";
+            tTest.nome = textBox1.Text;
+            tTest.resumoProfissional = textBox2.Text;
+            tTest.endereco = textBox3.Text;
+            tTest.cidade_estado = textBox4.Text;
+            tTest.email = textBox5.Text;
+            tTest.telefone = textBox6.Text;
+            tTest.sitePessoal = textBox7.Text;
+            tTest.linkedin = textBox8.Text;
+            tTest.objetivoProfissional = textBox9.Text;
+
+            tTest.realized_at = DateTime.Now;
+            
 
             generateTestInPDF(tTest);
         }
@@ -49,7 +60,17 @@ namespace RelatorioInHTMLToPDF
             {
                 var html = File.ReadAllText(templateFileHTML, Encoding.UTF8);
                 html = html.Replace("|!@[LOGO]@!|", HttpUtility.HtmlDecode(@"<img src='" + config_.PathAndNameLogoReport + "' / >"));
-                html = html.Replace("|!@[TYPER_TEST]@!|", HttpUtility.HtmlEncode(obj.type == "AIR" ? "AIR" : "HYDRAULIC"));
+                html = html.Replace("|!@[TYPER_TEST]@!|", HttpUtility.HtmlEncode(obj.type_test == "Professional" ? "Professional" : "Amador"));
+                html = html.Replace("|!@[DATE]@!|", obj.realized_at.ToString());
+                html = html.Replace("|!@[NAME]@!|", obj.nome.ToString());
+                html = html.Replace("|!@[RESUMO]@!|", obj.resumoProfissional.ToString());
+                html = html.Replace("|!@[ENDERECO]@!|", obj.endereco.ToString());
+                html = html.Replace("|!@[CIDADE_ESTADO]@!|", obj.cidade_estado.ToString());
+                html = html.Replace("|!@[EMAIL]@!|", obj.email.ToString());
+                html = html.Replace("|!@[TELEFONE]@!|", obj.telefone.ToString());
+                html = html.Replace("|!@[URL_SITE_PESSOAL]@!|", obj.sitePessoal.ToString());
+                html = html.Replace("|!@[URL_LINKEDIN]@!|", obj.linkedin.ToString());
+                html = html.Replace("|!@[OBJETIVO_PROFESSIONAL]@!|", obj.objetivoProfissional.ToString());
                 html = html.Replace("|!@[DATE]@!|", obj.realized_at.ToString());
                 html = html.Replace("|!@[YEAR]@!|", DateTime.Now.Year.ToString());
 

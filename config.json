@@ -1,12 +1,10 @@
 {
-	"MainColor": "#0b4596",
-	"Manufacturer": "Cedeps\\Facens",
-	"PathBaseReport": "C:\\reports\\",
-	"PathTemplateReport": "C:\\reports\\template-report.html",
-	"PathTemplateReportRNC": "C:\\reports\\template-report-rnc.html",
-	"PathAndNameLogoReport": "C:\\reports\\progeral-thumbnail.png",
-	"PathLocalToSaveReport": "C:\\reports\\",
-	"PathProgramView": "c:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
-	"TitleProgram": "Progeral - Pressure Limit Test for Clamps",
-	"TitleLogin": "Login"
+  "MainColor": "#0b4596",
+  "Manufacturer": "GregMaster",
+  "PathBaseReport": "C:\\reports2\\",
+  "PathTemplateReport": "C:\\reports2\\template-report.html",
+  "PathAndNameLogoReport": "C:\\reports2\\logo.png",
+  "PathLocalToSaveReport": "C:\\reports2\\output\\",
+  "PathProgramView": "c:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
+  "TitleProgram": "Gera um relatório PDF a partir de um template HTML"
 }

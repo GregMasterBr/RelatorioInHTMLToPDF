@@ -9,14 +9,20 @@ namespace RelatorioInHTMLToPDF
     public class StructTest
     {
         public int idTest = 0;
-        public string type = "";
-        public string codeTypeTest = "";
-        public string traceNumber = "";
-        public string loteNumber = "";
-        public string codeProduct = "";
+        public string type_test = "";
+
+        public string nome = "";
+        public string resumoProfissional = "";
+        public string endereco = "";
+        public string cidade_estado = "";
+        public string email = "";
+        public string telefone = "";
+        public string sitePessoal = "";
+        public string linkedin = "";
+        public string objetivoProfissional = "";
+
         public int qtProduced = 0;
         public int qtSample = 0;
-        public string standard = "";
         public string inspectionType = "";
         public int timeTest = 0;
         public DateTime created_at;
@@ -33,7 +39,6 @@ namespace RelatorioInHTMLToPDF
         public float? addSec = 0;
         public string codErro = "";
         public DateTime? realized_at;
-
     }
 
 

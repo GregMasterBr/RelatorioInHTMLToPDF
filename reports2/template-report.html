@@ -4,7 +4,7 @@
 	<meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="Author" content="Gregorio, GregMaster, CEDEPS, FACENS" />
-	<title>Report Progeral </title>
+	<title>Report Curriculo by GregMaster </title>
 	<style>
 		*{
 			font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -18,6 +18,9 @@
         border: 1px solid black;
         border-collapse: collapse;
       }
+	  .col-img img{
+		width:150px;
+	  }
 	  .Approved, .Pass{
 	  	font-weight:bold;
 		color:green;
@@ -28,171 +31,119 @@
 	  }
     </style>
 </head>
-<body style="border: 0px solid #000; margin:0;padding:0;">
+<body style="border: 0px solid #000; margin:0;padding:0;" class="|!@[COLOR_BKG]@!|">
 	<div class="container " style="border: 0px solid #1C6EA4;padding: 20px; ">
 		<header>
 			<table border="0" style="width:100%">
 				<thead>
 				  <tr>
-					<th colspan="2"> 
-						|!@[LOGO]@!|
+					<th colspan="2" class="col-img"> 
+						|!@[LOGO]@!|						
 					</th>
-					<th><h1>Report - TEST - |!@[TYPER_TEST]@!|</h1></th>
+					<th><h1>Currículo - |!@[TYPER_TEST]@!|</h1></th>
 					<th><span>|!@[DATE]@!|</span></th>
+				  </tr>
+				  <tr> 
+					<th colspan="4" > 
+						<h2>|!@[NAME]@!|<h2>
+					</th>
 				  </tr>
 				</thead>
 			</table>			
 		</header>
 		
+		<h3 style="color:navy">|!@[RESUMO]@!|</h3>
+		
 		<main class="tables">
-			<h2>Information</h2>	
+			<h2>Dados pessoais</h2>	
 			<table border="0" style="width:100%">
 				<tbody>
 				  <tr>
-					<td><b>Tracebility Number</b></td>
-					<td>|!@[TRACEBILITY_NUMBER]@!|</td>
-					<td><b>Status</b></td>
-					<td class="|!@[STATUS]@!|">|!@[STATUS]@!|</td>						
+					<td><b>Endereço</b></td>
+					<td>|!@[ENDERECO]@!|</td>
+				  </tr>
+				  <tr>					
+					<td><b>Cidade/Estado</b></td>
+					<td>|!@[CIDADE_ESTADO]@!|</td>						
 				  </tr>
 				  <tr>
-					<td><b>Sample</b></td>
-					<td>|!@[QTT_SAMPLE]@!|</td>
-					<td><b>Total Quantity</b></td>
-					<td>|!@[QTT_TOTAL]@!|</td>
+					<td><b>E-mail</b></td>
+					<td>|!@[EMAIL]@!|</td>
 				  </tr>
 				  <tr>
-					<td><b>Lot material</b></td>
-					<td>|!@[LOT_MATERIAL]@!|</td>
-					<td><b>Standard</b></td>
-					<td>|!@[STANDARD_TEST]@!|</td>
+					<td><b>Telefone/Whatsapp</b></td>
+					<td>|!@[TELEFONE]@!|</td>
 				  </tr>
 				  <tr>
-					<td><b>Material Code</b></td>
-					<td>|!@[MATERIAL_CODE]@!|</td>
-					<td><b>Product</b></td>
-					<td>|!@[PRODUCT]@!|</td>
+					<td><b>SITE PESSOAL</b></td>
+					<td>|!@[URL_SITE_PESSOAL]@!|</td>	
 				  </tr>
 				  <tr>
-					<td><b>Operator</b></td>
-					<td>|!@[OPERATOR]@!|</td>
-					<td><b>Date</b></td>
-					<td>|!@[DATE_TEST]@!|</td>
-				  </tr>
-				  <tr>
-					<td><b>Inspection Type</b></td>
-					<td>|!@[INSPECTION_TYPE]@!|</td>
-					<td><b>Turn</b></td>
-					<td>|!@[TURN]@!|</td>
+					<td><b>LINKEDIN</b></td>
+					<td>|!@[URL_LINKEDIN]@!|</td>
 				  </tr>
 				</tbody>
 			</table>	
-			<h5 style="color:red">|!@[ERROR_GENERAL]@!|</h5>
+			<h3 style="color:teal">|!@[OBJETIVO_PROFESSIONAL]@!|</h3>
 		</main>
 		<div class="tables">
 			<section style="clear:both">
-				<h2>Standard</h2>		
+				<h2>Formação Acadêmica</h2>		
 				<table border="0" style="width:100%">
+					<thead>
+					<tr>
+						<th>#</th>
+						<th>Curso</th>
+						<th>Instituição</th>
+						<th>Data de conclusão</th>
+						<th>Concluído</th>
+					  </tr>
+					</thead>
 					<tbody>
-					  <tr>
-						<td>Name</td>
-						<td>|!@[STANDARD_TEST_2]@!|</td>
-						<td>Standard</td>
-						<td>|!@[STANDARD_TEST]@!|</td>					
-					  </tr>
-					  <tr>
-						<td>Bar (Max)</td>
-						<td>|!@[BAR_MAX]@!|</td>
-						<td><b>Fall Bar</b></td>
-						<td>|!@[FALL_BAR]@!|</td>						
-					  </tr>
-					  <tr>
-						<td><b>Bar increment</b></td>
-						<td>|!@[BAR_ADD]@!|</td>
-						<td><b>Bar increment per sec</b></td>
-						<td>|!@[BAR_SEC]@!|</td>							
-					  </tr>   					  
+						|!@[ITENS_FORMACAO_ACADEMICA]@!|
 					</tbody>
 				</table>	
 			
 			</section>
 
 			<section style="clear:both">
-				<h2 class="|!@[RNC]@!|">RNC Information</h2>		
+				<h2>Idiomas e Habilidades</h2>		
 				<table border="0" style="width:100%">
 					<tbody>
 					<tr>
-						<td>Responsible</td>
-						<td>|!@[RESPONSIBLE_RNC]@!|</td>
-						<td>Compreenhise RNC next inspection</td>
-						<td>|!@[COMPREEHISE_RNC]@!|</td>
+						<td>Inglês</td>
+						<td>|!@[INGLES_NIVEL]@!|</td>
+						<td>Informática básica</td>
+						<td>|!@[INFORMATICA_NIVEL]@!|</td>
 					  </tr>
 					  <tr>
-						<td>Code Product</td>
-						<td>|!@[CODE_PRODUCT_RNC]@!|</td>
-						<td>Product's Name</td>
-						<td>|!@[PRODUCT_NAME_RNC]@!|</td>
+						<td>Escrita</td>
+						<td>|!@[ESCRITA_NIVEL]@!|</td>
+						<td>Fala</td>
+						<td>|!@[FALA_NIVEL]@!|</td>
 					  </tr>
-					  <tr>
-						<td>Operation</td>
-						<td>|!@[OPERATION_RNC]@!|</td>
-						<td>Annotations</td>
-						<td>|!@[ANNOTATIONS_RNC]@!|</td>
-					  </tr>
-					  <tr>
-						<td>Quantanty of the box</td>
-						<td>|!@[QTT_BOX_RNC]@!|</td>
-						<td>Alert</td>
-						<td>|!@[ALERT_RNC]@!|</td>
-					  </tr>	
-					  <tr>
-						<td>Critical Quality Analysis</td>
-						<td colspan="3">|!@[CRITICAL_ANALYSIS_RNC]@!|</td>
-					  </tr>				  
-					  
 					</tbody>				  
 				</table>
-				<h3>Details Elements of the RNC</h3>		
+				<h3>Experiência Profissional</h3>		
 				<table border="0" style="width:100%">
 					<thead>
 					<tr>
-						<th>#</th>
-						<th>Non Conformity Code</th>
-						<th>Quantity</th>
-						<th>Disposition</th>
-						<th>Description</th>
-						<th>Observation</th>					
+						<th>Data</th>
+						<th>Cargo</th>
+						<th>Nome empresa</th>
+						<th>Atividades</th>				
 					  </tr>
 					</thead>
 					<tbody>
-						|!@[ITENS_RNC]@!|
+						|!@[ITENS_EXPERIENCIA_PROFISSIONAL]@!|
 					</tbody>				  
 				</table>				
 			</section>
 				
-			<section style="clear:both">
-				<h2 id="|!@[ID_TEST]@!|">Consolidated Test Elements Results</h2>		
-				<h3>Executed |!@[QTT_REALIZED]@!|/|!@[QTT_SAMPLE]@!|</h3>								
-				<table border="0" style="width:100%">
-					<thead>
-					<tr>
-						<th>#</th>
-						<th>Id Item</th>						
-						<th>Status</th>
-						<th>Obs</th>
-						<th>Min</th>
-						<th>Max</th>						
-						<th>Change in leak test</th>
-						<th>Date</th>
-					  </tr>
-					</thead>
-					<tbody>
-						|!@[ITENS]@!|
-					</tbody>				  
-				</table>			
-			</section>
+
 		</div>
 		<footer style="margin-top: 20px; text-align:center;">
-			<small style="text-align:center; display:block;"> @Copyright Progeral Clamp Developers - |!@[YEAR]@!| </small>
+			<small style="text-align:center; display:block;"> @Copyright Generated by GregMaster - |!@[YEAR]@!| </small>
 		</footer>
 	</div>
 </body>

@@ -292,7 +292,7 @@
             this.ClientSize = new System.Drawing.Size(1044, 626);
             this.Controls.Add(this.tabControl);
             this.Name = "Form1";
-            this.Text = "Gera um relatório PDF a partir de um template HTML";
+            this.Text = "Gera um arquivo PDF a partir de um template HTML";
             this.tabControl.ResumeLayout(false);
             this.tabPageRelatorio.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRelatorio)).EndInit();

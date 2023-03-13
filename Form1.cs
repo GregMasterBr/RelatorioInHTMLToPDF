@@ -14,18 +14,17 @@ using System.Windows.Forms;
 
 namespace RelatorioInHTMLToPDF
 {
+
     public partial class Form1 : Form
     {
         public static string path_base = System.AppDomain.CurrentDomain.BaseDirectory.ToString();
-        public static string path_base2 = System.AppDomain.CurrentDomain.ToString();
         Config config_ = new Config();
 
         public Form1()
         {
             InitializeComponent();
             configSettings();
-            this.Text = config_.TitleProgram;
-
+           this.Text = (config_.TitleProgram);
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -60,7 +59,9 @@ namespace RelatorioInHTMLToPDF
             {
                 var html = File.ReadAllText(templateFileHTML, Encoding.UTF8);
                 html = html.Replace("|!@[LOGO]@!|", HttpUtility.HtmlDecode(@"<img src='" + config_.PathAndNameLogoReport + "' / >"));
+                html = html.Replace("|!@[COLOR_BKG]@!|", config_.MainColor);
                 html = html.Replace("|!@[TYPER_TEST]@!|", HttpUtility.HtmlEncode(obj.type_test == "Professional" ? "Professional" : "Amador"));
+
                 html = html.Replace("|!@[DATE]@!|", obj.realized_at.ToString());
                 html = html.Replace("|!@[NAME]@!|", obj.nome.ToString());
                 html = html.Replace("|!@[RESUMO]@!|", obj.resumoProfissional.ToString());
@@ -195,5 +196,6 @@ namespace RelatorioInHTMLToPDF
                 MessageBox.Show("The config file does not exist . Add and restart the system.");
             }
         }
+
     }
 }

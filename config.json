@@ -1,10 +1,10 @@
-{
-  "MainColor": "#0b4596",
+﻿{
+  "MainColor": "#ECF0F1",
   "Manufacturer": "GregMaster",
   "PathBaseReport": "C:\\reports2\\",
   "PathTemplateReport": "C:\\reports2\\template-report.html",
   "PathAndNameLogoReport": "C:\\reports2\\logo.png",
   "PathLocalToSaveReport": "C:\\reports2\\output\\",
   "PathProgramView": "c:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
-  "TitleProgram": "Gera um relat�rio PDF a partir de um template HTML"
+  "TitleProgram": "Gera um relatório PDF a partir de um template HTML"
 }

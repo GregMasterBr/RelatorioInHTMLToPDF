@@ -29,8 +29,10 @@ namespace RelatorioInHTMLToPDF
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Random rInt = new Random();
 
+            List<StructTest> listatTest = new List<StructTest>();
+            
+            Random rInt = new Random();
             StructTest tTest = new StructTest();
             tTest.idTest = rInt.Next(0, 1000000);
             tTest.type_test = "Professional";
@@ -43,9 +45,13 @@ namespace RelatorioInHTMLToPDF
             tTest.sitePessoal = textBox7.Text;
             tTest.linkedin = textBox8.Text;
             tTest.objetivoProfissional = textBox9.Text;
-
             tTest.realized_at = DateTime.Now;
-            
+
+            listatTest.Add(tTest);
+            // https://www.luisdev.com.br/2021/12/21/como-ler-e-escrever-dados-em-arquivos-csv-com-c/
+
+
+
 
             generateTestInPDF(tTest);
         }
@@ -75,6 +81,48 @@ namespace RelatorioInHTMLToPDF
                 html = html.Replace("|!@[DATE]@!|", obj.realized_at.ToString());
                 html = html.Replace("|!@[YEAR]@!|", DateTime.Now.Year.ToString());
 
+                int index = 1;
+                var table_tr_itens = "";
+
+                foreach (DataGridViewRow item in dataGridView1.Rows)
+                {
+                    table_tr_itens += (
+                        @"<tr>" +
+                            "<td>" + index.ToString() + "</td>" +
+                            "<td>" + item.Cells["Curso"].Value + "</td>" +
+                            "<td>" + item.Cells["Instituicao"].Value + "</td>" +
+                            "<td>" + item.Cells["dt_conclusao"].Value + "</td>" +
+                            "<td>" + item.Cells["concluido"].Value.ToString() + "</td>" +
+                        "</tr>" + "\n"
+                        );
+                    index++;
+                }
+                
+                html = html.Replace("|!@[ITENS_FORMACAO_ACADEMICA]@!|", HttpUtility.HtmlDecode(table_tr_itens));
+
+                html = html.Replace("|!@[INGLES_NIVEL]@!|", comboBox1.SelectedText.ToString());
+                html = html.Replace("|!@[INFORMATICA_NIVEL]@!|", comboBox2.SelectedText.ToString());
+                html = html.Replace("|!@[ESCRITA_NIVEL]@!|", comboBox3.SelectedText.ToString());
+                html = html.Replace("|!@[FALA_NIVEL]@!|", comboBox4.SelectedText.ToString());
+
+                var table_tr_itens2 = "";
+
+                foreach (DataGridViewRow item in dataGridView2.Rows)
+                {
+                    table_tr_itens2 += (
+                        @"<tr>" +
+                            "<td>" + index.ToString() + "</td>" +
+                            "<td>" + item.Cells["data"].Value + "</td>" +
+                            "<td>" + item.Cells["cargo"].Value + "</td>" +
+                            "<td>" + item.Cells["empresa"].Value + "</td>" +
+                            "<td>" + item.Cells["atividades"].Value.ToString() + "</td>" +
+                        "</tr>" + "\n"
+                        );
+                    index++;
+                }
+
+                html = html.Replace("|!@[ITENS_EXPERIENCIA_PROFISSIONAL]@!|", HttpUtility.HtmlDecode(table_tr_itens2));
+
                 string outputFilePDF = @config_.PathLocalToSaveReport + obj.idTest.ToString() + ".pdf";
 
                 string nameFile = obj.idTest.ToString() + ".pdf";
@@ -96,13 +144,15 @@ namespace RelatorioInHTMLToPDF
                    
                     // Recurso para gerar o arquivo de diversas maneiras
                     /*
-                     * openPDFFileWithoutProgram(nameFile);
+                    openPDFFileWithoutProgram(nameFile);
                     openPDFFileWithProgram(nameFile);
                     //Save a version in HTML AND OPEN FILE
                     string outputFileHTML = @config_.PathLocalToSaveReport + obj.idTest.ToString() + ".html";
                     File.WriteAllText(outputFileHTML, html, Encoding.UTF8);
                     openHTMLFileLikeReport(nameFile.Replace(".pdf", ".html"));
                     */
+
+                    
 
                 }
             }
@@ -197,5 +247,24 @@ namespace RelatorioInHTMLToPDF
             }
         }
 
+        private void btnCadastrarFormacao_Click(object sender, EventArgs e)
+        {
+            Random rInt = new Random();
+            dataGridView1.Rows.Add(rInt.Next(0, 1000000).ToString(), textBox10.Text, textBox11.Text, textBox12.Text, checkBox1.Checked);
+            textBox10.Text = "";
+            textBox11.Text = "";
+            textBox12.Text = "";
+            checkBox1.Checked = false;
+        }
+
+        private void btnAdicionarExperienciaProfissional_Click(object sender, EventArgs e)
+        {
+            Random rInt = new Random();
+            dataGridView2.Rows.Add(rInt.Next(0, 1000000).ToString(), textBox13.Text, textBox14.Text, textBox15.Text, textBox16.Text);
+            textBox13.Text = "";
+            textBox14.Text = "";
+            textBox15.Text = "";
+            textBox16.Text = "";
+        }
     }
 }
